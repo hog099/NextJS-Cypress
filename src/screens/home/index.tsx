@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Header } from '../../components/header';
 
 // import { Container } from './styles';
 
@@ -9,7 +10,8 @@ const Home: React.FC = () => {
 
 
   return (
-    <div>
+    <>
+      <Header />
       <p>Home</p>
 
       <p>{count}</p>
@@ -23,7 +25,7 @@ const Home: React.FC = () => {
         data-cy="btn-count"
       >Click Me</button>
 
-    </div>
+    </>
   );
 
 
