@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 
-export const ContentCount = styled.div`
+export const Content = styled.div`
   &&{
     width: 100%;
     display: flex;
@@ -22,19 +22,7 @@ export const ContentCount = styled.div`
     justify-content: center;
     align-items: center;
 
-    p{
-      margin: 5px 0;
-      font-size: 30px;
-    }
-    button{
-      width: 100px;
-      height: 30px;
-      margin: 5px 0;
-      border: none;
-      background: #e5e5e5;
-      padding: 5px;
-      border-radius: 3px;
-    }
+    
   }
 `;
 

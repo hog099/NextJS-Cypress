@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Header } from '../../components/header';
 
-// import { Container } from './styles';
+import { Container, ContentCount } from './styles';
 
 const Home: React.FC = () => {
 
@@ -12,18 +12,27 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
-      <p>Home</p>
+      <Container>
 
-      <p>{count}</p>
+        <div style={{ height: 10 }} />
 
-      <Link href="/profile">
-        <a data-cy="link-navigation">Profile</a>
-      </Link>
+        <Link href="/profile">
+          <a data-cy="link-navigation">Ir para Perfil</a>
+        </Link>
 
-      <button
-        onClick={() => setCount(count + 1)}
-        data-cy="btn-count"
-      >Click Me</button>
+        <div style={{ height: 50 }} />
+
+        <ContentCount>
+          <p>{count}</p>
+
+          <button
+            onClick={() => setCount(count + 1)}
+            data-cy="btn-count"
+          >Increment</button>
+
+        </ContentCount>
+
+      </Container>
 
     </>
   );

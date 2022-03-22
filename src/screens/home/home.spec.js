@@ -12,14 +12,23 @@ describe('Home Test', () => {
             it('Should visit home page', () => {
                 cy.visit('/')
             });
-            describe('link-navigation', () => {
+            describe('Action count', () => {
+                for (let index = 0; index < 5; index++) {
+                    it('Should increment state', () => {
+                        cy.get('[data-cy=btn-count]').contains('Increment').click()
+                    })
+                }
+            })
+            describe('Link Profile', () => {
                 it('Should navigate to Profile page', () => {
-                    cy.get('[data-cy=link-navigation]').contains('Profile').click()
+                    cy.get('[data-cy=link-navigation]').contains('Perfil').click()
                     cy.url().should('include', '/profile')
+                    cy.go('back')
                 })
             })
         })
     })
+
     context('iphone-5 resolution', () => {
         beforeEach(() => {
             /**
@@ -36,10 +45,18 @@ describe('Home Test', () => {
                 it('Should open the mmenu', () => {
                     cy.get('[data-cy=btn-count]').click();
                 })
-                describe('link-navigation', () => {
+                describe('Action count', () => {
+                    for (let index = 0; index < 5; index++) {
+                        it('Should increment state', () => {
+                            cy.get('[data-cy=btn-count]').contains('Increment').click()
+                        })
+                    }
+                })
+                describe('Link Profile', () => {
                     it('Should navigate to Profile page', () => {
-                        cy.get('[data-cy=link-navigation]').contains('Profile').click()
+                        cy.get('[data-cy=link-navigation]').contains('Perfil').click()
                         cy.url().should('include', '/profile')
+                        cy.go('back')
                     })
                 })
             })

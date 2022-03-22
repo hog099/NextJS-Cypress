@@ -1,14 +1,36 @@
 import React from 'react';
+import { Header } from '../../components/header';
 
-// import { Container } from './styles';
+import { Container, Content } from './styles';
 
 const Profile: React.FC = () => {
 
 
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+
+
+
+  }
+
+  
+
   return (
-      <div>
-          <p>Profile</p>
-      </div>
+    <div>
+      <Header />
+      <Container>
+        <Content>
+          <p>Formulario</p>
+
+          <form onSubmit={handleSubmit}>
+
+
+          </form>
+
+        </Content>
+      </Container>
+    </div>
   );
 
 
